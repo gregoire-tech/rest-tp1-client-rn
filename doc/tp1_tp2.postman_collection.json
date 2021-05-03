@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "68087091-bb10-454e-8e84-904e3cca851f",
+		"name": "TP1 & TP2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "exo5",
+			"item": [
+				{
+					"name": "Insérer un livre (avec auteurs)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"isbn\": 9452114523145, \"title\": \"Mon premier livre\", \"year\": 2020, \"authors\": [{\"id\": 1}, {\"id\": 2}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/book",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Récupérer tous les livres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer tous les auteurs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insérer un auteur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"alias\": \"gf\", \"birth\": 1977, \"firstname\": \"Georges\", \"lastname\": \"Faure\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/author",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer un auteur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier un auteur",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 2, \"birth\": 1929 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/author",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insérer un livre (sans auteur)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isbn\": 9452114523145, \"title\": \"Mon premier livre\", \"year\": 2020}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insérer un livre (avec auteur)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isbn\": 9452114523145, \"title\": \"Mon premier livre\", \"year\": 2020, \"author\": {\"id\": 2}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer un livre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer un livre",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer un auteur",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rechercher des livres par titre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book/search?title=odeur",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "odeur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rechercher des auteurs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author/search?name=u",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "u"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rechercher les auteurs ayant écrits livres en doublons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author/duplicates",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author",
+						"duplicates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer tous les livres (paginée)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book?page=1&size=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer tous les livres d'un auteur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/author/2/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"author",
+						"2",
+						"book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
